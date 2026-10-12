@@ -1,5 +1,9 @@
+<div align="center">
+
+<img src="assets/hydrogen.icon.svg" width="30%" />
+
 # Quark Docs
 
-<img src="assets/quark.icon.svg" style="display: block;margin-left: auto; margin-right: auto; width: 30%;" />
+</div>
 
 Docusaurus documentation site for Quark.
