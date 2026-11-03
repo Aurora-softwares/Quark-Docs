@@ -1,0 +1,69 @@
+---
+import GlassPanel from '../components/haze/GlassPanel.astro';
+import AuroraBackground from '../components/haze/AuroraBackground.astro';
+import '../styles/haze/tokens.css';
+import '../styles/haze/glass.css';
+import '../styles/home.css';
+const root = import.meta.env.BASE_URL;
+const docs = root + 'docs/';
+const features = [
+  {icon:'✦',name:'Make something new',description:'Open a Hydrogen project, edit your source and work with familiar desktop tools.',href:docs+'first-project/'},
+  {icon:'◇',name:'Design visually',description:'Explore native-looking controls with the Hydrogen XML interface designer.',href:docs+'designer/'},
+  {icon:'⌘',name:'Build with confidence',description:'Run the Hydrogen compiler and follow its results without leaving your workspace.',href:docs+'build/'}
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="theme-color" content="#ede8ff" />
+ <meta name="description" content="Meet Quark: a friendly development environment for Hydrogen. Explore screenshots, easy tutorials and documentation." />
+ <title>Quark IDE — a comfortable place to create</title>
+ <link rel="icon" href={root+'quark-mark.svg'} type="image/svg+xml" />
+</head>
+<body>
+ <AuroraBackground intensity="medium" animated={true} />
+ <a class="skip" href="#main">Skip to content</a>
+ <header class="nav glass-nav">
+   <div class="nav-inner">
+     <a class="brand" href={root}><img src={root+'quark-mark.svg'} alt="" width="39" height="39"/><span>Quark<span class="soft"> IDE</span></span></a>
+     <nav aria-label="Main navigation">
+       <a href="#features">Explore</a><a href="#screenshots">Screenshots</a><a href={docs}>Documentation</a>
+       <a class="nav-repo" href="https://github.com/Aurora-softwares/Quark-IDE">GitHub ↗</a>
+     </nav>
+   </div>
+ </header>
+ <main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="eyebrow">✦ Made for creative minds and curious builders</span>
+      <h1 id="hero-title">A lovely little place to <span>make big things.</span></h1>
+      <p>Meet <strong>Quark</strong> — a thoughtful desktop IDE for Hydrogen. Bring your ideas, explore your projects, and build something wonderful, one step at a time.</p>
+      <div class="actions"><a class="button primary" href={docs+'first-project/'}>Get started <span aria-hidden="true">→</span></a><a class="button secondary" href={docs}>Read the docs</a></div>
+      <p class="small-note">Open source · In active development · Windows, macOS & Linux targets</p>
+    </div>
+    <GlassPanel variant="solid" padding="sm" className="hero-shot">
+      <div class="preview-top"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span>Inside Quark</span><span class="preview-badge">Development preview</span></div>
+      <img src={root+'images/quark-workspace.png'} alt="Screenshot of a Quark IDE development workspace" width="1280" height="720" loading="eager" />
+    </GlassPanel>
+  </section>
+  <section class="feature-section wrap" id="features">
+    <div class="section-header"><span class="eyebrow">A friendlier way to build</span><h2>Everything in its right place.</h2><p>Your ideas should be the exciting bit. Quark keeps everyday tools close at hand.</p></div>
+    <div class="features">
+      {features.map(f => <GlassPanel variant="solid" padding="lg" className="feature"><span class="feature-icon" aria-hidden="true">{f.icon}</span><h3>{f.name}</h3><p>{f.description}</p><a href={f.href}>Learn more →</a></GlassPanel>)}
+    </div>
+  </section>
+  <section class="showcase wrap" id="screenshots">
+    <div class="showcase-copy"><span class="eyebrow">See it in action</span><h2>A workspace that feels like yours.</h2><p>Take a look at Quark's themes, extensions and editing workspace. These are real screenshots from earlier development builds; the current native interface continues to evolve.</p><a class="text-link" href={docs+'screenshots/'}>Explore the screenshot gallery →</a></div>
+    <GlassPanel variant="solid" padding="sm" className="showcase-shot"><img src={root+'images/quark-catalogues.png'} alt="Quark IDE themes and extensions development screenshot" loading="lazy"/></GlassPanel>
+  </section>
+  <section class="start wrap">
+    <GlassPanel variant="solid" padding="xl" className="start-panel">
+      <div class="start-inner"><span class="eyebrow">Ready when you are</span><h2>Every great project begins somewhere.</h2><p>New to Hydrogen or already building? We've written the guides to help you find your feet.</p><div class="actions"><a class="button primary" href={docs+'install/'}>Install Quark →</a><a class="button secondary" href={docs}>Browse documentation</a></div></div>
+    </GlassPanel>
+  </section>
+ </main>
+ <footer class="footer wrap"><div><strong>✦ Quark IDE</strong><p>Made with care by Aurora Softwares.</p></div><div class="footer-links"><a href={docs}>Documentation</a><a href="https://github.com/Aurora-softwares/Quark-IDE">Source code</a><a href="https://github.com/Aurora-softwares/Quark-IDE/issues">Report an issue</a></div><p class="footnote">A growing open-source project. Features in development may change.</p></footer>
+</body>
+</html>
