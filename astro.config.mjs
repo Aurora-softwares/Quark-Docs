@@ -7,7 +7,7 @@ export default defineConfig({
   logo:{src:'./src/assets/quark-mark.svg'},
   social:[{icon:'github',label:'GitHub',href:'https://github.com/Aurora-softwares/Quark-IDE'}],
   customCss:['./src/styles/starlight.css'],
-  editLink:{baseUrl:'https://github.com/Aurora-softwares/Quark-Docs/edit/Development/'},
+  editLink:{baseUrl:'https://github.com/Aurora-softwares/Quark-Docs/edit/Release/'},
   sidebar:[
     {label:'Welcome',slug:'docs'},
     {label:'Get started',items:[{label:'Install Quark',slug:'docs/install'},{label:'Your first project',slug:'docs/first-project'}]},
