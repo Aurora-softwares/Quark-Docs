@@ -1,44 +1,23 @@
 {
   "name": "quark-docs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "Docusaurus documentation site for Quark.",
+  "type": "module",
   "scripts": {
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
-  },
-  "dependencies": {
-    "@docusaurus/core": "latest",
-    "@docusaurus/preset-classic": "latest",
-    "@mdx-js/react": "^3.0.0",
-    "clsx": "^2.0.0",
-    "prism-react-renderer": "^2.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@docusaurus/module-type-aliases": "latest",
-    "@docusaurus/tsconfig": "latest",
-    "@docusaurus/types": "latest"
-  },
-  "overrides": {
-    "webpack": "5.99.9"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "engines": {
-    "node": ">=20.0"
+    "node": ">=22.12.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 3 chrome version",
-      "last 3 firefox version",
-      "last 5 safari version"
-    ]
+  "dependencies": {
+    "astro": "7.4.4",
+    "@astrojs/starlight": "0.42.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.5.0"
   }
 }
