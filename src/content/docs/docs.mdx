@@ -1,0 +1,48 @@
+---
+title: Quark documentation
+description: Learn to write, build and design with Quark IDE using straightforward guides.
+template: splash
+hero:
+  title: Your Quark handbook.
+  tagline: Friendly explanations, useful screenshots, and the answers you need.
+  actions:
+    - text: Build your first project
+      link: /Quark-Docs/docs/first-project/
+      icon: right-arrow
+    - text: Back to the welcome page
+      link: /Quark-Docs/
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+Welcome! Start with a small project, learn how the workspace works, or look up a specific feature whenever you need a hand.
+
+## Start here
+
+<CardGrid>
+  <Card title="Getting started" icon="rocket">
+    [Install Quark](/Quark-Docs/docs/install/) and [create or open your first Hydrogen project](/Quark-Docs/docs/first-project/).
+  </Card>
+  <Card title="Find your way around" icon="open-book">
+    Take a [tour of the workspace](/Quark-Docs/docs/workspace/) and learn what the panes, tabs and menus do.
+  </Card>
+  <Card title="Build and run" icon="code">
+    [Connect the Hydrogen compiler](/Quark-Docs/docs/build/) and read your build results in Output.
+  </Card>
+  <Card title="Design an interface" icon="document">
+    Explore the [HYUI designer](/Quark-Docs/docs/designer/), XML source and separate native preview.
+  </Card>
+  <Card title="Personalise Quark" icon="setting">
+    Learn about [themes, extensions and customisation](/Quark-Docs/docs/personalise/).
+  </Card>
+  <Card title="Need a hand?" icon="code-branch">
+    Browse [common questions](/Quark-Docs/docs/help/), [screenshots](/Quark-Docs/docs/screenshots/) and [development status](/Quark-Docs/docs/status/).
+  </Card>
+</CardGrid>
+
+## A note about development builds
+
+Quark is moving toward a native desktop frontend. Features that are still being verified on Linux, Windows or macOS are labelled as development work, not promised as release-ready. Screenshots on this site are genuine Quark development captures, and some show the previous interface.
+
+See [what works today and what still needs testing](/Quark-Docs/docs/status/), or [suggest an improvement on GitHub](https://github.com/Aurora-softwares/Quark-IDE/issues).
