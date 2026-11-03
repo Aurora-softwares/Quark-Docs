@@ -7,6 +7,6 @@ npm install
 npm run dev
 npm run build
 ```
-The GitHub Pages workflow deploys the Development branch to https://aurora-softwares.github.io/Quark-Docs/.
+The GitHub Pages workflow deploys the Release branch to https://aurora-softwares.github.io/Quark-Docs/.
 
 Documentation reflects Quark-IDE's Development branch on 3 November 2026. Refresh the guides and screenshots alongside each user-facing IDE change. Do not confuse features under development with qualified releases.
